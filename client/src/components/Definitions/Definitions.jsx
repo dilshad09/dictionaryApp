@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Definitions = ({word, category, meanings}) => {
+const Definitions = ({word, meanings}) => {
   console.log(meanings)
   return (
     <>
