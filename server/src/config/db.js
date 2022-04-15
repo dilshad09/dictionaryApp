@@ -1,6 +1,9 @@
 const mongoose = require('mongoose')
-
-const connect = async ()=>{
-    return await mongoose.connect("mongodb+srv://dilshad09:05031994@dictionary.jxpqt.mongodb.net/dictionaryDB")
+require('dotenv').config()
+const connect =  ()=>{
+    return  mongoose.connect(process.env.MONGO_URI,{
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    })
 }
 module.exports = connect;

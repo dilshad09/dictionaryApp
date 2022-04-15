@@ -1,0 +1,13 @@
+.title{
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-family: 'Kumbh Sans';
+    text-align: center;
+}
+.inputs{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 35vh;
+    width: 100%;
+}
