@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
 const connect =  ()=>{
-    return  mongoose.connect("mongodb://127.0.0.1:27017/dictionaryDB")
+    return  mongoose.connect("mongodb+srv://dilshad000:dilshad09@cluster0.qpt2k.mongodb.net/dictionaryDatabase")
 }
 module.exports = connect;

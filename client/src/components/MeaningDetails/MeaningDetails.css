@@ -1,0 +1,11 @@
+.meaning-details{
+    text-align: left;
+    position: relative;
+}
+
+.cancel-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
