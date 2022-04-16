@@ -1,18 +1,16 @@
-import { MenuItem, TextField } from '@mui/material'
-import React, { useState } from 'react'
+import {TextField } from '@mui/material'
+import React from 'react'
 import './Header.css'
-
+import SearchIcon from '@mui/icons-material/Search';
 const Header = ({word, setWord}) => {
     
     
   return (
-    <div className='header'>
-      <div className='title'>
-          <span>{word ? word : "Word Hunt"}</span>
-          <div className='inputs'>
-          <TextField id="standard-basic" value={word} onChange={(e)=>setWord(e.target.value)} label="Search" variant="standard" />
+    
+      <div className='header'>
+          <div className='inputs'> 
+          <TextField style={{width:"100%"}} id="standard-basic" value={word} onChange={(e)=>setWord(e.target.value)} label="Vocab" variant="standard" />
           </div>
-      </div>
     </div>
   )
 }

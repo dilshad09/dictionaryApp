@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Definitions = ({word, meanings}) => {
+const MeaningList = ({word, meanings}) => {
   console.log(meanings)
   return (
     <>
@@ -21,4 +21,4 @@ const Definitions = ({word, meanings}) => {
   )
 }
 
-export default Definitions
+export default MeaningList

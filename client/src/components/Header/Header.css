@@ -1,13 +1,14 @@
-.title{
+.header{
     font-size: 5vw;
-    text-transform: uppercase;
     font-family: 'Kumbh Sans';
     text-align: center;
+    background-color: rgb(156,39,176);
+   
 }
 .inputs{
     display: flex;
+    position: relative;
     text-align: center;
     justify-content: space-evenly;
-    height: 35vh;
-    width: 100%;
+    
 }

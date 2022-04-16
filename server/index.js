@@ -11,6 +11,6 @@ const dictionaryController = require('./src/controller/Dictionary.controller')
 app.use("/dictionary", dictionaryController)
 
 app.listen(5000, async ()=>{
-    await connect("mongodb+srv://dilshad000:dilshad09@cluster0.qpt2k.mongodb.net/myFirstDatabase")
+    await connect()
     console.log("server running on port 5000")
 })
