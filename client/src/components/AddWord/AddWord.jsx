@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 import Button from '@mui/material/Button';
@@ -11,7 +9,11 @@ import DialogTitle from '@mui/material/DialogTitle';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 
+
+
+
 export default function FormDialog() {
+
     const [word, setWord] = useState("")
   const [meanings, setMeanings] = useState([])
   const [open, setOpen] = useState(false);
@@ -45,10 +47,11 @@ export default function FormDialog() {
  
   useEffect(()=>{
     postDataToMongoDB()
+    
   },[meanings])
   return (
     <div>
-         <Fab size="large" color="secondary" aria-label="add" onClick={handleClickOpen} style={{position:"absolute", bottom:"1rem", right:"1rem"}}>
+         <Fab size="large" color="secondary" aria-label="add" onClick={handleClickOpen} style={{position:"fixed", bottom:"6rem", right:"33rem"}}>
           <AddIcon />
           </Fab>
    
@@ -73,6 +76,7 @@ export default function FormDialog() {
           <Button onClick={()=>{
             addToDictionary()
             setWord("")
+            
           }}>Add</Button>
         </DialogActions>
       </Dialog>

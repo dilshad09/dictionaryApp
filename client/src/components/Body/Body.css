@@ -1,11 +1,19 @@
 .body{
     width: 25vw;
     height: 80vh;
-    margin: auto;
+    margin:3rem auto;
     border-radius: 5%;
     background-color: white;
     overflow-x: hidden;
     overflow-y: scroll;
     scrollbar-width:thin;
+    
+    /* width */
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.container{
     position: relative;
 }

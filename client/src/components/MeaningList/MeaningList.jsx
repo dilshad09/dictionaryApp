@@ -3,30 +3,28 @@ import './MeaningList.css'
 import MeaningDetails from '../MeaningDetails/MeaningDetails'
 import { Navigate, useNavigate } from 'react-router'
 import { Link } from 'react-router-dom'
-const MeaningList = ({word, meanings}) => {
+const MeaningList = () => {
   const navigate = useNavigate()
 
   const [details, setDetails] = useState()
   const [detailsStatus, setDetaisStatus] = useState(false)
-    const [data, setData] = useState([{
-      word:"Dilshad",
-      meaning:"Ahmad"
-    }])
+    const [data, setData] = useState([])
+    
   const fetchDataFromMongoDB = ()=>{
        fetch("http://localhost:5000/dictionary").then(response=>response.json()).then(res=>{
-         setData(res)
-         console.log("res",res)
+         let reverse = [...res].reverse()
+         setData(reverse)
+         console.log("res",reverse)
        })
   }
-
+  
+  const handleHistory = ()=>{
+    setDetaisStatus(false)
+  }
   const handleDetails = (item)=>{
-    console.log("item", item)
-    setDetails(item)
-    setDetaisStatus(true)
     
-    return <>{<MeaningDetails  details={details}/>}
-            
-    </>
+    setDetails(item)
+    setDetaisStatus(true)          
   }
   
   useEffect(()=>{
@@ -35,14 +33,16 @@ const MeaningList = ({word, meanings}) => {
   return (
     <>
      <div className='meanings' >
-        {detailsStatus ? <MeaningDetails  details={details}/> : data.map((item,i)=>{
-          return <div key={i} className="meaning-item" onClick={()=>
-          handleDetails(item)
+        {detailsStatus ? <MeaningDetails handleHistory={handleHistory} details={details}/> : data.map((item,i)=>{
+          return <>
+                  <div key={i} className="meaning-item" onClick={()=>
+                   handleDetails(item)
         }>
            <div><b>{item.word}</b></div>
            <div>{item.meaning}</div>
            <hr />
           </div>
+          </>
           
         }) 
         

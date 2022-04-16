@@ -3,11 +3,12 @@
     font-family: 'Kumbh Sans';
     text-align: center;
     background-color: rgb(156,39,176);
-   
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
 }
 .inputs{
     display: flex;
-    position: relative;
     text-align: center;
     justify-content: space-evenly;
     
