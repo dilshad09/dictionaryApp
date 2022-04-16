@@ -1,16 +1,19 @@
 import React from 'react'
+import "./Body.css"
 import { Container } from '@mui/material';
 import Headers from '../Header/Header'
 import FormDialog from '../AddWord/AddWord'
+import MeaningList from '../MeaningList/MeaningList'
 const Body = () => {
   return (
-    <>
-      <Container style={{backgroundColor:"white",width:"25vw", height:"80vh", position:"relative", borderRadius:"5%", marginTop:"2rem"}}>
+    <div className='body'>
+      <div className='container'>
           <Headers/>
+          <MeaningList />
           <FormDialog/>
-      </Container>
+      </div>
 
-    </>
+    </div>
   )
 }
 

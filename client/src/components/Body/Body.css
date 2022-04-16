@@ -1,0 +1,11 @@
+.body{
+    width: 25vw;
+    height: 80vh;
+    margin: auto;
+    border-radius: 5%;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width:thin;
+    position: relative;
+}
