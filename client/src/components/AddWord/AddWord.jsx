@@ -51,7 +51,7 @@ export default function FormDialog() {
   },[meanings])
   return (
     <div>
-         <Fab size="large" color="secondary" aria-label="add" onClick={handleClickOpen} style={{position:"fixed", bottom:"6rem", right:"33rem"}}>
+        <Fab className="add-button" size="large" color="secondary" aria-label="add" onClick={handleClickOpen}>
           <AddIcon />
           </Fab>
    
