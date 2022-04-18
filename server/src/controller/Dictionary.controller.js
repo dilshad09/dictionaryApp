@@ -17,11 +17,20 @@ router.post("/", async(req,res)=>{
 
 router.get("/", async(req,res)=>{
     try {
-        const dictionary = await Dictionary.find()
+        const dictionary = await Dictionary.find().lean().exec()
         res.status(200).send(dictionary)
     } catch (error) {
         console.log(error)
     }
 })
 
+router.get("/find/:word", async(req,res)=>{
+    console.log()
+    try {
+        const dictionary = await Dictionary.find({word:req.params.word}).lean().exec()
+        res.status(200).send(dictionary)
+    } catch (error) {
+        console.log(error)
+    }
+})
 module.exports = router;
