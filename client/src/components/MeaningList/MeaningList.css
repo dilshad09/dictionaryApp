@@ -1,5 +1,23 @@
+.header{
+    font-size: 5vw;
+    font-family: 'Kumbh Sans';
+    text-align: center;
+    background-color: rgb(156,39,176);
+    position: sticky;
+    top: 0;
+    margin-bottom: 1rem;
+}
+.inputs{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    
+}
+
+
 .meaning-item{
     background-color: rgb(251, 242, 242);
     text-align: left;
     cursor: pointer;
 }
+
